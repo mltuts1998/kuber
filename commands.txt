@@ -1,0 +1,8 @@
+1. create files Dockerfile, index.html, package.json, server.js
+2. Run this command sudo docker build . -t jhabarsingh/kuber
+3. Run this command sudo docker login
+4. push this to dockerhub: sudo docker push jhabarsingh/kuber
+5. kubectl create deployment nodeapp --image=jhabarsingh/kuber --replicas=5
+6. kubectl expose deployment nodeapp --type=NodePort --port=8080
+7. kubectl get services --> check the port no (x:y/TCP)  -> port is y
+8. now type ip of the gpu:y/index.html    -> 172.1.14.78:31903/index.html
